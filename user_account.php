@@ -125,6 +125,7 @@
 		<title><?php echo $row_info['first_name'] ?>'s Account | UCC Robotics</title>
 		<link rel="icon" href="css/favicon.ico" />
 		<?php include_once("functions/stylesheet.php") ?>
+		<script src="js/jquery.js"></script>
 	</head>
 
 	<body>
@@ -168,23 +169,40 @@
 				</div>
 
 				<div class="panel-body">
-				</div>
-				<li class="list-group-item">
-					<form class="form-signin" action="?accountNightmode" method="post">
+					<div class="row">
 						<div class="col-md-4">
-							Set Nightmode State:
+							<h4>Have an idea for a feature?</h4>
 						</div>
 						<div class="col-md-8">
-							<select class="form-control" id="nightmode_state" name="nightmode_state" required="">
-								<option value="0">Choose an Option.</option>
-								<option value="1">Always Light Mode</option>
-								<option value="2">Always Dark Mode</option>
-								<option value="3">Per Session (Defaults to light mode)</option>
-								<option value="4">Per Session (Defaults to dark mode)</option>
-							</select>
+							You can submit feature requests on the <a href="https://github.com/malsf21/robotics-club-website">GitHub repository</a>. You can <a href="https://github.com/malsf21/robotics-club-website">fork our repository</a> and then <a href="https://github.com/malsf21/robotics-club-website/pulls">submit a pull request</a> and we'll take a look!
 						</div>
-						<button type="submit" class="btn btn-success" id="submitbutton" value="Login" >Save Changes</button>
-					</form>
+					</div>
+				</div>
+
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-md-4">
+							Set Nightmode State:
+							</br>
+							</br>
+						</div>
+						<div class="col-md-8">
+							<form class="form-signin" action="?accountNightmode" method="post">
+								<div class="input-group">
+									<select class="form-control" id="nightmode_state" name="nightmode_state" required="">
+										<option value="0">Choose an Option.</option>
+										<option value="1">Always Light Mode</option>
+										<option value="2">Always Dark Mode</option>
+										<option value="3">Per Session (Defaults to light mode)</option>
+										<option value="4">Per Session (Defaults to dark mode)</option>
+									</select>
+									<span class="input-group-btn">
+										<button type="submit" class="btn btn-success" id="submitbutton" value="Login" >Save Changes</button>
+									</span>
+								</div>
+							</form>
+						</div>
+					</div>
 				</li>
 			</div>
 			<div class="panel panel-danger">
@@ -200,7 +218,7 @@
 			</div>
 		</div>
 
-		<script src="js/jquery.js"></script>
+
 		<script src="js/jquery.easing.min.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/nav-collapse.js"></script>
